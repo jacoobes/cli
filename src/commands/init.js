@@ -50,6 +50,7 @@ export async function init({ flags }) {
 		const exee = await execa('npm', ['init', '-y']).catch(
 			() => null
 		); /* .stdout.pipe(process.stdout) */
+
 		await wait(300);
 		if (!exee || exee?.failed) {
 			spin.fail(
