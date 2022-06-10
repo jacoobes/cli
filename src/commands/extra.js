@@ -10,4 +10,3 @@ export async function extra() {
 	const lang = extra.extra.includes('typescript') ? 'TS' : 'JS';
 	await create(extra.extra.split('-')[0], lang, process.cwd(), true);
 }
-
